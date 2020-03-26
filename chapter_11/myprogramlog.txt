@@ -1,0 +1,5 @@
+2020-03-25 17:23:12,864 - DEBUG - Some debugging details.
+2020-03-25 17:23:12,864 - INFO - The logging module is working.
+2020-03-25 17:23:12,864 - WARNING - An error message is about to be logged.
+2020-03-25 17:23:12,864 - ERROR - An error has occurred.
+2020-03-25 17:23:12,864 - CRITICAL - The program is unable to recover!
