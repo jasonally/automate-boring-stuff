@@ -1,28 +1,28 @@
 1. Write an assert statement that triggers an AssertionError if the variable 
 spam is an integer less than 10.  
-Answer: assert spam >= 10, 'Spam is less than 10.'
+Answer: `assert spam >= 10, 'Spam is less than 10.'`
 
 2. Write an assert statement that triggers an AssertionError if the variables 
 eggs and bacon contain strings that are the same as each other, even if their cases are different (that is, 'hello' and 'hello' are considered the same, and 'goodbye' and 'GOODbye' are also considered the same).  
-Answer: assert eggs.lower() != bacon.lower(), 'eggs and bacon are the same.'
+Answer: `assert eggs.lower() != bacon.lower(), 'eggs and bacon are the same.'`
 
 3. Write an assert statement that always triggers an AssertionError.  
-Answer: assert False, 'This assert statement always triggers.'
+Answer: `assert False, 'This assert statement always triggers.'`
 
 4. What are the two lines that your program must have in order to be able to 
 call logging.debug()?  
-Answer: import logging and a logging.basicConfig() statement (e.g., logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')).
+Answer: import logging and a logging.basicConfig() statement (e.g., `logging.basicConfig(level=logging.DEBUG, format=' %(asctime)s - %(levelname)s - %(message)s')`).
 
 5. What are the two lines that your program must have in order to have logging.debug() send a logging message to a file named programLog.txt?  
 Answer: import logging and a logging.basicConfig() statement with a filename 
-parameter (e.g., logging.basicConfig(filename='programLog.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')).
+parameter (e.g., `logging.basicConfig(filename='programLog.txt', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')`).
 
 6. What are the five logging levels?  
 Answer: DEBUG, INFO, WARNING, ERROR, and CRITICAL.
 
 7. What line of code can you add to disable all logging messages in your 
 program?  
-Answer: A logging.disable() statement (e.g., logging.disable(logging.DEBUG)).
+Answer: A logging.disable() statement (e.g., `logging.disable(logging.DEBUG)`).
 
 8. Why is using logging messages better than using print() to display the same message?  
 Answer: You can easily toggle on/off logging messages from appearing on the
