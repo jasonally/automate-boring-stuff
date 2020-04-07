@@ -1,8 +1,8 @@
 1. Briefly describe the differences between the webbrowser, requests, bs4, and selenium modules.
-– webbrowser – Opens default browser to a specific page and that's about it. Documentation [here](https://docs.python.org/3.8/library/webbrowser.html). webbrowser comes installed with Python.
-– requests – Module which allows you to download files and pages from the internet.
-– bs4 – Beautiful Soup, version 4 is an HTML parser. This allows you to extract content from a web page.
-– selenium – Module which launches and controls a web browser, allowing you to fill in forms and simulate mouse clicks.
+– webbrowser – Opens default browser to a specific page and that's about it. Documentation [here](https://docs.python.org/3.8/library/webbrowser.html). webbrowser comes installed with Python.
+– requests – Module which allows you to download files and pages from the internet. Documentation [here](https://requests.readthedocs.io/en/master/).
+– bs4 – Beautiful Soup, version 4 is an HTML parser. This allows you to extract content from a web page. Documentation [here](https://www.crummy.com/software/BeautifulSoup/bs4/doc/).
+–  selenium – Module which launches and controls a web browser, allowing you to fill in forms and simulate mouse clicks. Documentation [here](https://www.selenium.dev/selenium/docs/api/py/api.html) and [here](https://selenium-python.readthedocs.io/).
 
 2. What type of object is returned by requests.get()? How can you access the downloaded content as a string value?
 It's a Response object: <class 'requests.models.Response'>. The object has a .text attribute which allows you to access the downloaded content as a string.
@@ -14,16 +14,17 @@ The raise_for_status() method raises an exception if there's an error downloadin
 A Response object has a status_code attribute. You can check it against requests.code.ok (i.e., Response.status_code == requests.codes.ok) to see if the status code was 200.
 
 5. How do you save a requests response to a file?
-You can use the open() function and write() method with a for loop. Example:
-> import requests
-> res = requests.get('https://automatetheboringstuff.com/files/rj.txt')
-> res.raise_for_status()
-> play_file = open('RomeoAndJuliet.txt', 'wb')
-> for chunk in res.iter_content(100000):
->   play_file.write(chunk)
-> play_file.close()
-
-You have to open the file in write binary mode to maintain the Unicode encoding of the text.
+You can use the open() function and write() method with a for loop. You have to open the file in write binary mode to maintain the Unicode encoding of the text.
+Example:
+~~~~
+import requests
+res = requests.get('https://automatetheboringstuff.com/files/rj.txt')
+res.raise_for_status()
+play_file = open('RomeoAndJuliet.txt', 'wb')
+for chunk in res.iter_content(100000):
+    play_file.write(chunk)
+play_file.close()
+~~~~
 
 6. What is the keyboard shortcut for opening a browser’s developer tools?
 In Chrome on a Mac: Cmd + Option + I.
